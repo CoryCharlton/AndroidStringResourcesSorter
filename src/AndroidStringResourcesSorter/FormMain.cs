@@ -16,11 +16,13 @@ namespace AndroidStringResourcesSorter
         {
             _buttonSave.Enabled = false;
 
-            // TODO: Should remeber / restore the last selected directory
+            // TODO: Should remember / restore the last selected directory
             using (var dialog = new FolderBrowserDialog())
             {
                 // NOTE: For testing purposes
-                //dialog.SelectedPath = @"C:\src\personal\SmokingLog\common\src\main\res";
+                dialog.SelectedPath = @"C:\src\personal\AppManager\app-manager-core\src\main\res";
+                //dialog.SelectedPath = @"C:\src\personal\ccswe-android\ccswe-android-core\src\main\res";
+                //dialog.SelectedPath = @"C:\src\personal\SmokingLog\smoking-log-common\src\main\res";
                 dialog.ShowNewFolderButton = false;
 
                 if (dialog.ShowDialog() == DialogResult.OK)
